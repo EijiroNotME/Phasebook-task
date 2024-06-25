@@ -41,13 +41,13 @@ def search_users(args):
 
         if search_name and matches_partial(user["name"], search_name):
             match = True
-            priority = min(priority, 2)  # Name has priority 2
+            priority = min(priority, 2)  
         if search_age and matches_age(user["age"], search_age):
             match = True
-            priority = min(priority, 3)  # Age has priority 3
+            priority = min(priority, 3)  
         if search_occupation and matches_partial(user["occupation"], search_occupation):
             match = True
-            priority = min(priority, 4)  # Occupation has priority 4
+            priority = min(priority, 4)  
 
         if match:
             user["match_priority"] = priority
